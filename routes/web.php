@@ -12,4 +12,12 @@ Route::get('/article/detail/{article}', 'ArticlesController@detail');
 
 Route::get('/article/create', 'ArticlesController@create');
 
-Route::post('/article/store', 'ArticlesController@store');
+Route::get('/article/update/{article}', 'ArticlesController@edit');
+
+Route::get('/article/delete/{article}', 'ArticlesController@delete');
+
+Route::patch('/article/update/{article}', 'ArticlesController@update');
+
+Route::post('/article/', 'ArticlesController@store');
+
+Route::post('/article/{article}/comments', 'CommentsController@store');

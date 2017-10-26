@@ -23,8 +23,8 @@
             <td></td>
             <td>
                 <a href="/article/detail/{{ $element->id }}">Detail</a>
-                | <a href="">Update</a>
-                | <a href="">Delete</a>
+                | <a href="/article/update/{{ $element->id }}">Update</a>
+                | <a href="/article/delete/{{ $element->id }}">Delete</a>
             </td>
         </tr>
         @endforeach
