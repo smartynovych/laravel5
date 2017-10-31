@@ -12,5 +12,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $faker = Faker\Factory::create();
+
+        DB::table('articles')->insert([
+            'name' => $faker->title,
+            'description' => $faker->text,
+            'created_at' => new \DateTime(),
+            'updated_at' => new \DateTime(),
+        ]);
     }
 }
