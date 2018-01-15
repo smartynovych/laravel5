@@ -11,7 +11,7 @@ class Article extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class)->latest ();
+        return $this->hasMany(Comment::class)->latest();
     }
 
     public function addComment($body)
